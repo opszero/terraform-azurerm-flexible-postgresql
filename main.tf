@@ -93,6 +93,9 @@ resource "azurerm_postgresql_flexible_server" "main" {
 
   lifecycle {
     create_before_destroy = true
+    ignore_changes = [
+      authentication[0].tenant_id
+    ]
   }
 }
 
@@ -205,7 +208,7 @@ resource "azurerm_private_dns_zone_virtual_network_link" "addon_vent_link" {
   count                 = var.enabled && var.addon_vent_link ? 1 : 0
   name                  = format("%s-pgsql-vnet-link-addon", var.name)
   resource_group_name   = var.addon_resource_group_name
-  private_dns_zone_name = var.existing_private_dns_zone == null ? azurerm_private_dns_zone.main[0].name : var.existing_private_dns_zone
+  private_dns_zone_name = var.existing_private_dns_zone_name == "" ? azurerm_private_dns_zone.main[0].name : var.existing_private_dns_zone_name
   virtual_network_id    = var.addon_virtual_network_id
   tags                  = var.tags
 }
