@@ -6,7 +6,7 @@
 |------|---------|
 | <a name="provider_azuread"></a> [azuread](#provider\_azuread) | >= 2.53.1 |
 | <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | >=3.89.0 |
-| <a name="provider_random"></a> [random](#provider\_random) | 3.7.2 |
+| <a name="provider_random"></a> [random](#provider\_random) | 3.8.0 |
 ## Inputs
 
 | Name | Description | Type | Default | Required |
@@ -77,7 +77,7 @@
 | [azurerm_role_assignment.identity_assigned](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/role_assignment) | resource |
 | [azurerm_role_assignment.rbac_keyvault_crypto_officer](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/role_assignment) | resource |
 | [azurerm_user_assigned_identity.identity](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/user_assigned_identity) | resource |
-| [random_password.main](https://registry.terraform.io/providers/hashicorp/random/3.7.2/docs/resources/password) | resource |
+| [random_password.main](https://registry.terraform.io/providers/hashicorp/random/3.8.0/docs/resources/password) | resource |
 | [azuread_group.main](https://registry.terraform.io/providers/hashicorp/azuread/latest/docs/data-sources/group) | data source |
 | [azurerm_client_config.current](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/data-sources/client_config) | data source |
 ## Outputs
